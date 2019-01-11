@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         _camera = Camera.main;
         _motor = GetComponent<UnitMotor>();
+        _camera.GetComponent<CameraController>().Target = transform;
     }
     
     private void Update()

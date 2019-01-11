@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,6 +52,21 @@ public class InputManager
         {
             return result;
         }
+    }
+
+    public static Vector3 GetMousePosition()
+    {
+        return Input.mousePosition;
+    }
+
+    public static bool GetButtonMiddleDown()
+    {
+        return Input.GetMouseButtonDown((int)MouseButton.Midle);
+    }
+
+    public static float GesScrollIndex()
+    {
+        return Input.GetAxis("Mouse ScrollWheel");
     }
 }
 
